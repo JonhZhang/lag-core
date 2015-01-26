@@ -25,6 +25,10 @@ public class UserController {
 		
 		List<User> users = userService.queryAllUser();
 		model.addAttribute("users",users);
+		
+		
+		
+		System.out.println("Iam 44183");
 		return "index";
 	}
 	
