@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间必须和对应接口的一样 -->
+<mapper namespace="com.sin.lag.dao.IUserDao">
+	<sql id="userColumns">
+		user_name as username ,password,age
+	</sql>
+
+  <select id="queryUserById" parameterType="int" resultType="user">
+    select id,<include refid="userColumns"/> from user_t  where id=#{id}
+  </select>
+  
+  
+  <insert id="insertUser" parameterType="com.sin.lag.pojo.User">
+  	insert into user_t(<include refid="userColumns"/>) values(#{userName},#{password},#{age})
+  </insert>
+  
+</mapper>
