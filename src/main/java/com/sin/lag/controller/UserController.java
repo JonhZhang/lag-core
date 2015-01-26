@@ -27,7 +27,7 @@ public class UserController {
 		model.addAttribute("users",users);
 		
 		
-		System.out.println("追加");
+		System.out.println("追加2");
 		System.out.println("Iam 44183");
 		return "index";
 	}
