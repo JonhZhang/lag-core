@@ -28,7 +28,7 @@ public class UserController {
 		model.addAttribute("users",users);
 		
 		
-		System.out.println("asddsa");
+		System.out.println("asddsa2222");
 		return "index"; 
 	}
 	
