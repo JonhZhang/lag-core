@@ -26,7 +26,6 @@ public class UserController {
 		
 		List<User> users = userService.queryAllUser();
 		model.addAttribute("users",users);
-		System.out.println("这次换新的222");
 		return "index"; 
 	}
 	
