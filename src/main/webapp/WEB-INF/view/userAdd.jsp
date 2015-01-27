@@ -12,8 +12,8 @@
 	
 	<div>
 		<form:form modelAttribute="user" method="post">
-			username:<form:input path="username" /> <br/>
-			password:<form:input path="password" /> <br/>
+			username:<form:input path="username" /> <form:errors path="username"/> <br/>
+			password:<form:input path="password" /> <form:errors path="password"/><br/>
 			age: <form:input path="age"  /> <br/>
 			<input type="submit"/>
 		</form:form>
