@@ -17,4 +17,5 @@
   	insert into user_t(<include refid="userColumns"/>) values(#{userName},#{password},#{age})
   </insert>
   
+  
 </mapper>

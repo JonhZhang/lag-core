@@ -7,4 +7,6 @@ import com.sin.lag.pojo.User;
 public interface IUserService {
 	 User getUserById(int userId);
 	 List<User> queryAllUser();
+	 void updateUser(User user);
+	 void add(User user);
 }

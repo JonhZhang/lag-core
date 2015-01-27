@@ -8,23 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>
-		<a href="users/add">Add</a>
-	</h3>
-	<table>
-		<tr>
-			<td>username</td>
-			<td>age</td>
-			<td>operate</td>
-		</tr>
+	<h1>用户详情</h1>
 	
-	<c:forEach items="${users}" var="u">
-		<tr>
-			<td>${u.username }</td>
-			<td>${u.age }</td>
-			<td><a href="users/edit/${u.id }">Edit</a></td>
-		</tr>			
-	</c:forEach>
-	</table>	
+	<div>
+			<p> name:${user.username }</p>
+			<p> age:${user.age}</p>
+	</div>
+	
 </body>
 </html>

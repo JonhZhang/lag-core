@@ -25,4 +25,14 @@ public class UserServiceImpl implements IUserService{
 		return this.userDao.queryAllUser();
 	}
 
+	@Override
+	public void updateUser(User user) {
+		this.userDao.updateUser(user);
+	}
+
+	@Override
+	public void add(User user) {
+		this.userDao.add(user);
+	}
+
 }
