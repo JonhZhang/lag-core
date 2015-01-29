@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间必须和对应接口的一样 -->
+<mapper namespace="com.sin.lag.dao.ICategoryDao">
+	<sql id="columns">
+		id,name,pid
+	</sql>
+
+  <select id="queryList" parameterType="int" resultType="category">
+    select <include refid="columns"/> from t_category  where pid=#{pid}
+  </select>
+  
+  
+</mapper>
