@@ -5,14 +5,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/index")
+@RequestMapping
 public class IndexController {
 	
 	Logger logger = Logger.getLogger(IndexController.class);
-	@RequestMapping
+	@RequestMapping("/index")
 	public String toFrontIndex() {
 		logger.info("step index");
 		return "front/index";
 	}
+	
+	
 	
 }

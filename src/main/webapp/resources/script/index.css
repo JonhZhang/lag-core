@@ -1,62 +1,28 @@
 .body {
 	margin: 0px;
-	border: 1px solid red; 
 	height: 100%;
 }
 
-.nav {
-	height: 63px;
-	background: #FAFAFA;
-	
-}
-
-.nav a.logo {
-	width:229px;
-	height:43px;
-	display:block;
-	background: #00B38A;
-	margin-left: 200px;
-	margin-top: 5px;
-	float: left;
-}
-
-.nav ul {
-	float: left;
-}
-
-.nav ul li {
-	float: left;
-	list-style: none;
-	font-size: 20px;
-	padding:0 20px;
-}
-
-.content {
-	width: 1024px;
-	margin: 35px auto 0;
-	height: 1000px;	
-	clear: both;
-}
 
 /*左侧导航*/
 .content .sidebar {
-	width:230px;
+	width: 230px;
 	background: #FAFAFA;
 	float: left;
-
 }
 
 .content .sidebar .box {
-	padding:6px 12px 6px 12px;
+	padding: 6px 12px 6px 12px;
 	clear: both;
 }
+
 .content .sidebar a {
-	padding:0 8px;
+	padding: 0 8px;
 	margin: 0 5px 5px 0;
 	float: left;
-	
 }
-.content .sidebar h3{
+
+.content .sidebar h3 {
 	font-size: 16px;
 	font-weight: normal;
 	text-indent: 5px;
@@ -65,25 +31,27 @@
 /* 右侧主要内容 */
 .content-right {
 	float: right;
-	width: 744px;	
-	
+	width: 744px;
 }
 
 .content-right .search_condition {
 	float: left;
-	border:2px solid #00B38A;
+	border: 2px solid #00B38A;
 	height: 37px;
 	line-height: 37px;
 	width: 65px;
 	text-align: center;
 }
+
 .content-right .search_wrap {
-	float:left;
-	
+	float: left;
+}
+.content-right .search_area {
+	overflow: hidden;
 }
 .content-right .search_wrap #search_box {
-	border:2px solid #00B38A;
-	border-left:none;
+	border: 2px solid #00B38A;
+	border-left: none;
 	width: 476px;
 	height: 23px;
 	line-height: 23px;
@@ -91,19 +59,61 @@
 	font-size: 16px;
 	padding: 7px 8px 7px 10px;
 }
+
 .content-right .search_wrap #search_button {
-	border:2px solid #00B38A;
-	color:white;
-	background-color:#00B38A; 
+	border: 2px solid #00B38A;
+	color: white;
+	background-color: #00B38A;
 	height: 41px;
 	line-height: 41px;
 	width: 165px;
 	text-align: center;
-	font: 16px/22px Arial,"Hiragino Sans GB","微软雅黑","宋体";	
+	font: 16px/22px Arial, "Hiragino Sans GB", "微软雅黑", "宋体";
 }
+.content-right .hot_search {
+	height: 45px;
+	line-height: 45px;	
+}
+.content-right .table .head {
+	background: #F6F6F6;
+	height: 35px;
+	line-height: 35px;
+}
+
+.content-right .table .head ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.content-right .table .head ul li {
+	float: left;
+	font-size: 16px;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+.content-right .table .head ul li.current {
+	background-color: white;
+	border-top: 2px solid #00B38A;
+}
+
+.content-right .table table {
+	width: 100%;
+}
+
+.content-right .table table td {
+	
+}
+
+.content-right .table table td h3 span {
+	color: #999;
+	font-size: 14px;
+	font-weight: normal;
+}
+
 .footer {
 	height: 50px;
 	line-height: 50px;
 	text-align: center;
 }
-

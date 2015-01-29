@@ -23,18 +23,8 @@ $(function() {
 <body>
 
 	<div class="body">
-		<div class="nav">
-				<a href="#" class="logo">
-				</a>
-				<ul>
-					<li>首页</li>
-					<li>公司</li>
-					<li>我的简历</li>
-				</ul>
-				<div class="collapsible_menu">
-					
-				</div>
-		</div>
+		<jsp:include page="include/header.jsp" />
+		
 		
 		<div class="content">
 			<div class="sidebar">
@@ -105,6 +95,83 @@ $(function() {
 						 <div class="search_wrap">
 						 	<input type="text" id="search_box" /><input type="submit" id="search_button" value="搜索">
 						 </div>
+					</div>
+					<div class="hot_search">
+						热门搜索：<a href="#">交互设计</a>
+						<a href="#">交互设计</a>
+						<a href="#">交互设计</a>
+						<a href="#">交互设计</a>
+						<a href="#">交互设计</a>
+					</div>
+					
+					<div class="table">
+						<div class="head">
+							<ul>
+								<li class="current">热门职位</li>
+								<li>最新职位</li>
+							</ul>
+						</div>
+						<table>
+							<tr>
+								<td>
+									<h3>反作弊策略运营经理  <span>[北京]</span></h3>
+									<p>月薪： 20k-25k 经验： 3-5年 最低学历： 本科 </p>
+									<p>职位诱惑：创业环境、团队氛围、上升空间</p>
+									<p>14:35发布</p>
+								</td>
+								<td>
+									<h3>滴滴打车</h3>
+									<p>领域： 移动互联网 创始人：程维 </p>
+									<p>阶段： 成熟型(C轮) 规模：500-2000人</p>
+									<p>弹性工作 节日礼物</p>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<h3>反作弊策略运营经理  <span>[北京]</span></h3>
+									<p>月薪： 20k-25k 经验： 3-5年 最低学历： 本科 </p>
+									<p>职位诱惑：创业环境、团队氛围、上升空间</p>
+									<p>14:35发布</p>
+								</td>
+								<td>
+									<h3>滴滴打车</h3>
+									<p>领域： 移动互联网 创始人：程维 </p>
+									<p>阶段： 成熟型(C轮) 规模：500-2000人</p>
+									<p>弹性工作 节日礼物</p>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<h3>反作弊策略运营经理  <span>[北京]</span></h3>
+									<p>月薪： 20k-25k 经验： 3-5年 最低学历： 本科 </p>
+									<p>职位诱惑：创业环境、团队氛围、上升空间</p>
+									<p>14:35发布</p>
+								</td>
+								<td>
+									<h3>滴滴打车</h3>
+									<p>领域： 移动互联网 创始人：程维 </p>
+									<p>阶段： 成熟型(C轮) 规模：500-2000人</p>
+									<p>弹性工作 节日礼物</p>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<h3>反作弊策略运营经理  <span>[北京]</span></h3>
+									<p>月薪： 20k-25k 经验： 3-5年 最低学历： 本科 </p>
+									<p>职位诱惑：创业环境、团队氛围、上升空间</p>
+									<p>14:35发布</p>
+								</td>
+								<td>
+									<h3>滴滴打车</h3>
+									<p>领域： 移动互联网 创始人：程维 </p>
+									<p>阶段： 成熟型(C轮) 规模：500-2000人</p>
+									<p>弹性工作 节日礼物</p>
+								</td>
+							</tr>
+						</table>
 					</div>
 			</div>
 			

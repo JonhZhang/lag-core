@@ -16,3 +16,38 @@ a{
 }
 
 
+.nav {
+	height: 63px;
+	background: #FAFAFA;
+}
+
+.nav a.logo {
+	width: 229px;
+	height: 43px;
+	display: block;
+	background: #00B38A;
+	margin-left: 200px;
+	margin-top: 5px;
+	float: left;
+}
+
+.nav ul {
+	float: left;
+	margin-top: 15px;
+}
+
+.nav ul li {
+	float: left;
+	list-style: none;
+	font-size: 20px;
+	padding: 0 20px;
+}
+
+.content {
+	width: 1024px;
+	margin: 35px auto 0;
+	overflow: hidden;
+	min-height: 1000px;
+}
+
+
