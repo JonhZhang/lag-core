@@ -1,12 +1,14 @@
 package com.sin.lag.pojo;
 
+import java.util.List;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 public class Category {
 	private Integer id;
 	private String name;
 	private Integer pid;
-
+	private List<Category> childs;
 	public Category() {
 		super();
 	}
@@ -52,6 +54,18 @@ public class Category {
 
 	public void setPid(Integer pid) {
 		this.pid = pid;
+	}
+
+	
+
+	public List<Category> getChilds() {
+		return childs;
+	}
+
+
+
+	public void setChilds(List<Category> childs) {
+		this.childs = childs;
 	}
 
 

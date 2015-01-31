@@ -25,9 +25,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<p>
 					选择父类:
 					
-					<select>
+					<select multiple="multiple" style="width:150px;" name="pid">
+						<option value="0">顶级</option>
 						<c:forEach items="${list }" var="category" >
-							<option   >${category.name }</option>
+							<option value="${category.id}" >${category.name }</option>
 						</c:forEach>
 					</select>
 					

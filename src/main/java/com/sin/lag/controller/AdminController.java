@@ -39,9 +39,8 @@ public class AdminController {
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public String add(@Valid Category category,BindingResult bindingResult) {
 		System.out.println(category);
-		category.setPid(0);
 		categoryService.add(category);
-		return "front/adminAdd";
+		return "redirect:/add";
 	}
 	
 }
