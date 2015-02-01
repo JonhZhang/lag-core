@@ -7,5 +7,7 @@ import com.sin.lag.pojo.Category;
 public interface ICategoryService {
 	void add(Category category);
 
-	List<Category> queryList(int pid);
+	void constructOptions(StringBuilder options,int pid,int level);
+	void constructId(List<Integer> ids,int pid);
+	void delete(int pid);
 }

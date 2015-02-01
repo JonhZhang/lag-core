@@ -21,15 +21,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="body">
 		<jsp:include page="include/header.jsp" />
 		<div class="content">
-			<form action="/lag/add" method="post">
+			<form   method="post" >
 				<p>
 					选择父类:
 					
-					<select multiple="multiple" style="width:150px;" name="pid">
+					<select multiple="multiple" style="width:250px;height: 400px" name="pid">
 						<option value="0">顶级</option>
-						<c:forEach items="${list }" var="category" >
-							<option value="${category.id}" >${category.name }</option>
-						</c:forEach>
+						${options}
 					</select>
 					
 				</p>
@@ -37,7 +35,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				 	主分类名： <input  name="name" type="text"  >	<form:errors path="category.name"/>
 				 </p>	
 				 <p>
-				 	<input type="submit">
+				 	<input type="submit" value="save" id="save">
+				 	<input type="submit" value="delete" id="delete">
 				 </p>	
 			</form>
 			

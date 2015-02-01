@@ -1,14 +1,33 @@
 package com.sin.lag.pojo;
 
-import javax.validation.constraints.Size;
-
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 public class User {
 	private String id;
-	private String username;
+	private String chinessName;
 	private String password;
-	private int age;
+	private String email;
+	private String phone;
+	private String image;
+	
+	@NotEmpty(message="email不能为空")
+	@Email(message="email格式不正确")
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	@NotEmpty(message="密码不能为空")
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public String getId() {
 		return id;
@@ -18,37 +37,29 @@ public class User {
 		this.id = id;
 	}
 
-	@NotEmpty (message = "用户名不能为空")
-	public String getUsername() {
-		return username;
+	public String getChinessName() {
+		return chinessName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setChinessName(String chinessName) {
+		this.chinessName = chinessName;
 	}
 
-	@NotEmpty (message = "密码不能为空")
-	@Size(min = 6, max = 10, message = "密码程度必须在6-10之间")
-	public String getPassword() {
-		return password;
+	public String getPhone() {
+		return phone;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
-	public int getAge() {
-		return age;
+	public String getImage() {
+		return image;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setImage(String image) {
+		this.image = image;
 	}
-
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password="
-				+ password + ", age=" + age + "]";
-	}
+	
 
 }

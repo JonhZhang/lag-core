@@ -5,29 +5,35 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <base href="<%=basePath%>">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Admin</title>
-<!-- <link href="resources/bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/> -->
+<title>Lag网注册</title>
 <link href="resources/script/main.css" rel="stylesheet" type="text/css"/>
+<link href="resources/script/register.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resources/script/jquery-1.11.2.js" ></script>
-<!-- <script type="text/javascript" src="resources/bootstrap-3.3.2-dist/js/bootstrap.min.js" ></script> -->
 
 <script type="text/javascript">
-$(function() {
-});
+
 </script>
 </head>
 <body>
 
 	<div class="body">
-		<jsp:include page="include/header.jsp" />
-		<div class="content">
-			<a href="add">添加分类</a> | <a href="register">添加文章</a>
+		
+		<div class="warp_out">
+			<form action="" method="post" >
+				<p>
+					<input type="text" placeholder="请输入常用邮箱地址" id="email"/>
+				</p>
+				<p>
+					<input type="text" placeholder="请输入密码" id="password"/>
+				</p>
+				<input type="submit" value="注册" id="regBtn"/>
+			</form>
 		</div>
+		
 	</div>
 
 </body>
