@@ -60,6 +60,13 @@ public class User {
 	public void setImage(String image) {
 		this.image = image;
 	}
-	
 
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", chinessName=" + chinessName
+				+ ", password=" + password + ", email=" + email + ", phone="
+				+ phone + ", image=" + image + "]";
+	}
+	
+	
 }

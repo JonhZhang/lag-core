@@ -16,23 +16,23 @@ public class UserServiceImpl implements IUserService{
 	private IUserDao userDao;
 
 	@Override
-	public User getUserById(int userId) {
-		return userDao.queryUserById(userId);
+	public List<User> queryUser() {
+		return null;
 	}
-
-	@Override
-	public List<User> queryAllUser() {
-		return this.userDao.queryAllUser();
-	}
-
-	@Override
-	public void updateUser(User user) {
-		this.userDao.updateUser(user);
-	}
-
-	@Override
+	
 	public void add(User user) {
-		this.userDao.add(user);
+		userDao.insertUser(user);
 	}
 
+	@Override
+	public User findUser(User user) {
+		user.setPassword(null);
+		return userDao.findUser(user);
+	}
+
+	
+
+	
+
+	
 }

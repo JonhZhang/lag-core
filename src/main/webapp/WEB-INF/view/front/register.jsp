@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -23,12 +24,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="body">
 		
 		<div class="warp_out">
-			<form action="" method="post" >
+			<form action="register" method="post" >
 				<p>
-					<input type="text" placeholder="请输入常用邮箱地址" id="email"/>
+					<input type="text" name="email" placeholder="请输入常用邮箱地址" id="email"/> <form:errors path="user.email"/> ${errorMessage}
 				</p>
 				<p>
-					<input type="text" placeholder="请输入密码" id="password"/>
+					<input type="text" name="password" placeholder="请输入密码" id="password"/> <form:errors path="user.password"/>
 				</p>
 				<input type="submit" value="注册" id="regBtn"/>
 			</form>

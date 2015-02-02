@@ -21,16 +21,18 @@ import com.sin.lag.service.IUserService;
 public class TestMyBatis {
 	private static Logger logger = Logger.getLogger(TestMyBatis.class);
 	@Resource
-	private IUserService userService = null;
+	private IUserService userService;
 	@Resource
 	private ICategoryService categoryService;
 	
 	@Test
 	public void test1() {
-		User user = userService.getUserById(1);
-		// System.out.println(user.getUserName());
-		// logger.info("值："+user.getUserName());
-		logger.info(JSON.toJSONString(user));
+		User user = new User();
+		user.setEmail("441837011@qq.com");
+		user.setPassword("123456");
+		User resultUser = userService.findUser(user);
+		System.out.println(resultUser);
+		logger.info(JSON.toJSONString(resultUser));
 	}
 	@Test
 	public void test2() {
