@@ -9,7 +9,7 @@
 					<li><a href="admin">GO管理</a></li>
 				</ul>
 				<div class="collapsible_menu">
-					
+					${sessionScope.loginUser}
 				</div>
 		</div>
 		

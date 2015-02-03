@@ -30,7 +30,7 @@ public class RegisterController {
 	}
 	
 	@RequestMapping(value="/register",method=RequestMethod.POST)
-	public String register(@Valid User user ,BindingResult bindingResult ,Model model,ModelMap map) {
+	public String register(@Valid User user ,BindingResult bindingResult ,Model model) {
 		User resultUser = userService.findUser(user);
 		if(bindingResult.hasErrors()) {
 			return "front/register";
@@ -40,12 +40,27 @@ public class RegisterController {
 			return "front/register";
 		}
 		
-		userService.add(resultUser);
+		userService.add(user);
 		logger.info("----------"+JSON.toJSONString(resultUser));
-		return "redirect:/index";
+		return "redirect:/login";
 	}
 	
 	
+	@RequestMapping(value="login",method=RequestMethod.GET)
+	public String login() {
+		
+		return "front/login";
+	}
 	
+	@RequestMapping(value="login",method=RequestMethod.POST)
+	public String login(User user ,Model model) {
+		User resultUser = userService.findUser(user);
+		if(resultUser == null) {
+			model.addAttribute("errorMessage", "没找到该用户");
+			return "front/login";
+		}
+		model.addAttribute("loginUser", resultUser);
+		return "redirect:/index";
+	}
 	
 }

@@ -4,7 +4,7 @@ import com.sin.lag.pojo.User;
 
 public interface IUserDao {
 	
-	void insertUser(User user);
+	void initUser(User user);
 	
 	User findUser(User user);
 	

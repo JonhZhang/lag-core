@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <base href="<%=basePath%>">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Lag网注册</title>
+<title>Lag网登入</title>
 <link href="resources/script/main.css" rel="stylesheet" type="text/css"/>
 <link href="resources/script/register.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resources/script/jquery-1.11.2.js" ></script>
@@ -24,15 +24,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="body">
 		
 		<div class="warp_out">
-			<p><a href="login">已有账号？直接登入</a></p>
-			<form action="register" method="post" >
+			<p>请登入</p>
+			<form action="login" method="post" >
 				<p>
 					<input type="text" name="email" placeholder="请输入常用邮箱地址" id="email"/> <form:errors path="user.email"/> ${errorMessage}
 				</p>
 				<p>
 					<input type="text" name="password" placeholder="请输入密码" id="password"/> <form:errors path="user.password"/>
 				</p>
-				<input type="submit" value="注册" id="regBtn"/>
+				<input type="submit" value="登入" id="regBtn"/>
 			</form>
 		</div>
 		

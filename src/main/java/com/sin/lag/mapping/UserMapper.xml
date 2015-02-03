@@ -19,8 +19,8 @@
   </select>
   
   
-  <insert id="insertUser" parameterType="user">
-  	insert into t_user(<include refid="userColumns"/>) values(#{email},#{password})
+  <insert id="initUser" parameterType="user">
+  	insert into t_user(email,password) values(#{email},#{password})
   </insert>
   
   

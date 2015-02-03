@@ -21,12 +21,11 @@ public class UserServiceImpl implements IUserService{
 	}
 	
 	public void add(User user) {
-		userDao.insertUser(user);
+		userDao.initUser(user);
 	}
 
 	@Override
 	public User findUser(User user) {
-		user.setPassword(null);
 		return userDao.findUser(user);
 	}
 
